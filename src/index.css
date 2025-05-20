@@ -1,0 +1,65 @@
+@tailwind utilities;
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+:root {
+  background-color: #24272B;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hi */
+.hi-font {
+  color: #3E78B2;
+  font-family: 'Tourney', sans-serif;
+  font-size: 50px;
+}
+
+
+/* Name */
+.name-font {
+  color: #004BA8;
+  font-family: 'Tourney', sans-serif;
+  font-size: 50px;
+}
+
+/* Name */
+.newcontainer {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+  gap: 15px;
+  z-index: 0;
+}
+
+.next-screen {
+  height: 100vh;
+  background-color: #8cb1f7;
+  margin-top: 125px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-left: 180px;
+  margin-right: 180px;
+  padding-top: 25px;
+  z-index: 0;
+  position: relative;
+}
+
+.my-projects {
+  display: flex;
+  color: #12375b;
+  font-family: 'Tourney', sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: -5px;
+  justify-content: center;
+  align-items: center;
+}
