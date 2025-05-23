@@ -16,7 +16,7 @@ body {
 
 /* Hi */
 .hi-font {
-  color: #3E78B2;
+  color: #70a4d7;
   font-family: 'Tourney', sans-serif;
   font-size: 50px;
 }
@@ -42,8 +42,7 @@ body {
 }
 
 .next-screen {
-  height: 100vh;
-  background-color: #8cb1f7;
+  background-color: #70a4d7;
   margin-top: 125px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -55,11 +54,16 @@ body {
 
 .my-projects {
   display: flex;
-  color: #12375b;
+  flex-direction: column;
+  color: #004BA8;
   font-family: 'Tourney', sans-serif;
   font-size: 40px;
   font-weight: 900;
   margin-top: -5px;
   justify-content: center;
   align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
 }
