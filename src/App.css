@@ -39,3 +39,36 @@
 .read-the-docs {
   color: #888;
 }
+
+.hoverable-img {
+  height: 120px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.hoverable-img:hover {
+  transform: scale(1.15);
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.skill-icon {
+  text-align: center;
+}
+
+.skill-label {
+  margin-top: 8px;
+  font-size: 20px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.skill-icon:hover .skill-label {
+  color: #004BA8;
+}
