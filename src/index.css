@@ -43,7 +43,7 @@ body {
 
 .next-screen {
   background-color: #70a4d7;
-  margin-top: 125px;
+  margin-top: 100px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   align-items: center;
@@ -67,3 +67,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+[id] { scroll-margin-top: 130px; }
+
+

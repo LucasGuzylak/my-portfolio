@@ -50,6 +50,16 @@
   transform: scale(1.15);
 }
 
+.mini-hoverable-img {
+  height: 100px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.mini-hoverable-img:hover {
+  transform: scale(1.15);
+}
+
 .skills-grid {
   display: flex;
   justify-content: center;

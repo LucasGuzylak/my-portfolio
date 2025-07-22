@@ -3,11 +3,12 @@ import './App.css'
 import ContactForm from './ContactForm'
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div>
         <div id="Home"></div>
-        <div className="navbar bg-base-100 shadow-sm fixed top-1/30 left-1/2 -translate-x-1/2 w-1/4 z-50 flex justify-between rounded-full">
+        <div className="navbar bg-base-100 shadow-sm fixed top-1/30 left-1/2 -translate-x-1/2 w-1/3 z-50 flex justify-between rounded-full">
           <a href="#Home" className="btn btn-soft btn-info rounded-full h-[3rem]">Home</a>
           <a href="#Projects" className="btn btn-soft btn-info rounded-full h-[3rem]">Projects</a>
           <a href="#Skills" className="btn btn-soft btn-info rounded-full h-[3rem]">Skills</a>
@@ -19,9 +20,9 @@ function App() {
         <div className="newcontainer" style={{position: "relative"}}>
           <div className="hi-font">Hi! I'm</div>
           <div className="name-font">Lucas Guzylak</div>
-          <div className="avatar" style={{position: "absolute", right: 20}}>
+          <div className="avatar" style={{height: 200}}>
             <div className="w-24 rounded-full">
-            <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+            <img src="/Portrait.jpeg"/>
             </div>
           </div>
         </div>
@@ -41,89 +42,95 @@ function App() {
             </button>
           </a>
         </div>
-
-        <div id="Projects" ></div>
-
-        <div className="next-screen">
-          <div className="my-projects">
-            My Projects
-          </div>
-          {/* <div style={{marginTop: "50px"}}/>
-          <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px"}}>
-            <img src="/college-of-sciences-vert-1color-black-rgb.png"
-              style={{width: "300px", height: "auto", position: "absolute", left: "18%"}} 
-              alt="College of Sciences Logo"/>
-            <div className="text-left" style={{color: "black", fontSize: "30px", marginLeft: "400px"}}>
-              <h4>Rapid: Workout Tracker App</h4>
-              <h5>Made with:</h5>
-              <h5>Graduating in 2028</h5>
-              <h5>GPA 3.8</h5>
-              <h5>Major in Computer Science</h5>
-              <h5>Dean's List - Fall 2024 & Spring 2025</h5>
-            </div> */}
-          {/* </div> */}
-        </div>
-
-        <div id="Skills" className="next-screen" style={{marginTop: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0, paddingBottom: 50 }}>
-          <div className="my-projects">
-            My Skills
+        
+        <div className= "next-screen">
+          <div id="Projects">
+            <div className="my-projects">
+              My Projects
+            </div>
             <div style={{marginTop: "50px"}}/>
-            <div className="skills-grid">
-              {[
-                ['java', 'Java'],
-                ['py', 'Python'],
-                ['cpp', 'C++'],
-                ['react', 'React'],
-                ['html', 'HTML'],
-                ['css', 'CSS'],
-                ['javascript', 'JavaScript'],
-                ['swift', 'Swift'],
-              ].map(([id, label]) => (
-              <div key={id} className="skill-icon">
-                <img
-                  src={`https://skillicons.dev/icons?i=${id}`}
-                  alt={label}
-                  title={label}
-                  className="hoverable-img"
-                />
-                <div className="skill-label">{label}</div>
+            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px"}}>   
+              <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
+                <video width="300" style={{ marginRight: "100px", borderRadius: "20px" }} controls>
+                  <source src="/Rapid_Demo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
-              ))}
+              <div style={{color: "black", fontSize: "24px", fontWeight: "600", maxWidth: "500px", textAlign: "left", paddingRight: "20px"}}>
+                <h3 style={{textAlign: "center"}}>Rapid Workout Tracker</h3>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
+                  <p style={{ margin: 0 }}>Made with:</p>
+                   <img src="https://skillicons.dev/icons?i=swift" className="mini-hoverable-img" style={{ height: "50px" }} />
+                  </div>
+                <p>🚧 This project is under construction!🚧</p>
+                <p>Rapid is a workout and exercise tracker that can be used for any fitness routine.</p>
+                <p>It lets users track the amount of reps, sets, or intervals for any workout of their choice.</p>
+                <p>Users can look at their past workouts and progression charts.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-
-        <div id="Education" className="next-screen" style={{marginTop: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0, paddingBottom: 50}}>
-          <div className="my-projects">
-            My Education
-          </div>
-          <div style={{marginTop: "50px"}}/>
-          <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px"}}>
-            <img src="/college-of-sciences-vert-1color-black-rgb.png"
-              style={{width: "300px", height: "auto", position: "absolute", left: "18%"}} 
-              alt="College of Sciences Logo"/>
-            <div className="text-left" style={{color: "black", fontSize: "30px", marginLeft: "400px"}}>
-              <h4>Pursuing a Bachelor of Science</h4>
-              <h5>San Diego State University</h5>
-              <h5>Graduating in 2028</h5>
-              <h5>GPA 3.8</h5>
-              <h5>Major in Computer Science</h5>
-              <h5>Dean's List - Fall 2024 & Spring 2025</h5>
+          <div id="Skills" style={{marginTop: 50, borderTopLeftRadius: 0, borderTopRightRadius: 0, paddingBottom: 50 }}>
+            <div className="my-projects">
+              My Skills
+              <div style={{marginTop: "50px"}}/>
+              <div className="skills-grid">
+                {[
+                  ['java', 'Java'],
+                  ['py', 'Python'],
+                  ['cpp', 'C++'],
+                  ['react', 'React'],
+                  ['html', 'HTML'],
+                  ['css', 'CSS'],
+                  ['javascript', 'JavaScript'],
+                  ['swift', 'Swift'],
+                ].map(([id, label]) => (
+                <div key={id} className="skill-icon">
+                  <img
+                    src={`https://skillicons.dev/icons?i=${id}`}
+                    alt={label}
+                    title={label}
+                    className="hoverable-img"
+                  />
+                  <div className="skill-label">{label}</div>
+                </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div id="Contact" className="next-screen" style={{marginTop: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0, paddingBottom: 50}}>
-          <div className="my-projects">
-            Contact Me
+
+          <div id="Education" style={{marginTop: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0, paddingBottom: 50}}>
+            <div className="my-projects">
+              My Education
+            </div>
+            <div style={{marginTop: "50px"}}/>
+            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px"}}>
+              <img src="/college-of-sciences-vert-1color-black-rgb.png"
+                style={{width: "300px", height: "auto", position: "absolute", left: "18%"}} 
+                alt="College of Sciences Logo"/>
+              <div className="text-left" style={{color: "black", fontSize: "30px", marginLeft: "400px"}}>
+                <h4>Pursuing a Bachelor of Science</h4>
+                <h5>San Diego State University</h5>
+                <h5>Graduating in 2028</h5>
+                <h5>GPA 3.8</h5>
+                <h5>Major in Computer Science</h5>
+                <h5>Dean's List - Fall 2024 & Spring 2025</h5>
+              </div>
+            </div>
           </div>
-          <h4 style={{color: "black"}}>Please contact me at&nbsp;
-            <a href="lucasguzy11@gmail.com" style={{color: "#004BA8"}}>
-            lucasguzy11@gmail.com
-            </a>
-          &nbsp;or through this form.</h4>
-          <ContactForm></ContactForm>
+
+          <div id="Contact" style={{marginTop: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0, paddingBottom: 50}}>
+            <div className="my-projects">
+              Contact Me
+            </div>
+            <h4 style={{color: "black"}}>Please contact me at&nbsp;
+              <a href="lucasguzy11@gmail.com" style={{color: "#004BA8"}}>
+              lucasguzy11@gmail.com
+              </a>
+            &nbsp;or through this form.</h4>
+            <ContactForm></ContactForm>
+          </div>
         </div>
 
         </main>
