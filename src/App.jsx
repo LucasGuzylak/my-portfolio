@@ -52,20 +52,26 @@ function App() {
             <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px"}}>   
               <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
                 <video width="300" style={{ marginRight: "100px", borderRadius: "20px" }} controls>
-                  <source src="/Rapid_Demo.mp4" type="video/mp4" />
+                  <source src="/rapid_screen_recording.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div style={{color: "black", fontSize: "24px", fontWeight: "600", maxWidth: "500px", textAlign: "left", paddingRight: "20px"}}>
-                <h3 style={{textAlign: "center"}}>Rapid Workout Tracker</h3>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
+                  <h3 style={{textAlign: "center", margin: 0}}>RAPID: Fitness Tracker</h3>
+                  <img src="/Rapid-logo.png" className="hoverable-img" style={{ width: "80px", height: "80px", borderRadius: "18px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)" }} alt="Rapid logo"></img>
+                </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
                   <p style={{ margin: 0 }}>Made with:</p>
                    <img src="https://skillicons.dev/icons?i=swift" className="mini-hoverable-img" style={{ height: "50px" }} />
                   </div>
-                <p>🚧 This project is under construction!🚧</p>
-                <p>Rapid is a workout and exercise tracker that can be used for any fitness routine.</p>
-                <p>It lets users track the amount of reps, sets, or intervals for any workout of their choice.</p>
-                <p>Users can look at their past workouts and progression charts.</p>
+                <p>Rapid is an iOS fitness app built with Swift and SwiftUI. It allows users to log workouts, track sets and reps, monitor progress, and maintain detailed fitness records.</p>
+                <p>The app uses Core Data for local storage, SwiftUI for the interface, and follows Apple's design guidelines for a clean and intuitive experience.</p>
+                <div style={{ display: "flex", justifyContent: "flex-start", marginTop: "20px", marginBottom: "0px" }}>
+                  <a href="https://apps.apple.com/us/app/rapid-fitness-tracker/id6752265158" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                    <img src="/appstore_logo.svg" className="hoverable-img" style={{ width: "180px", height: "60px", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)" }} alt="Download on the App Store"></img>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
