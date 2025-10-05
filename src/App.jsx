@@ -22,7 +22,7 @@ function App() {
           <div className="name-font">Lucas Guzylak</div>
           <div className="avatar" style={{height: 200}}>
             <div className="w-24 rounded-full">
-            <img src="/Portrait.jpeg"/>
+            <img src="/NewPortrait.jpeg"/>
             </div>
           </div>
         </div>
