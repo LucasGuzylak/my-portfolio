@@ -4,6 +4,7 @@ import ContactForm from './ContactForm'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('frontend');
 
   return (
     <div>
@@ -49,7 +50,8 @@ function App() {
               My Projects
             </div>
             <div style={{marginTop: "50px"}}/>
-            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px"}}>   
+            {/* RAPID Project */}
+            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0"}}>   
               <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
                 <video width="300" style={{ marginRight: "100px", borderRadius: "20px" }} controls>
                   <source src="/rapid_screen_recording.mp4" type="video/mp4" />
@@ -74,34 +76,140 @@ function App() {
                 </div>
               </div>
             </div>
+
+            {/* Campus Craves Project */}
+            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", marginBottom: "50px", paddingBottom: "20px"}}>   
+              <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
+                <div style={{ width: "300px", height: "200px", marginRight: "100px", borderRadius: "20px", backgroundColor: "#2d3748", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "24px" }}>
+                  Campus Craves
+                </div>
+              </div>
+              <div style={{color: "black", fontSize: "24px", fontWeight: "600", maxWidth: "500px", textAlign: "left", paddingRight: "20px"}}>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
+                  <h3 style={{textAlign: "center", margin: 0}}>Campus Craves</h3>
+                  <div className="hoverable-img" style={{ width: "80px", height: "80px", borderRadius: "18px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", backgroundColor: "#4a5568", flexShrink: 0 }}></div>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
+                  <p style={{ margin: 0 }}>Made with:</p>
+                   <img src="https://skillicons.dev/icons?i=react" className="mini-hoverable-img" style={{ height: "50px" }} alt="React" />
+                   <img src="https://skillicons.dev/icons?i=ts" className="mini-hoverable-img" style={{ height: "50px" }} />
+                  </div>
+                <p>Campus Craves is a mobile app built with React Native and TypeScript. It helps students discover and share the best food options on campus.</p>
+                <p>The app features real-time location-based recommendations, user reviews, and a social feed to connect students with great dining experiences.</p>
+                <div style={{ display: "flex", justifyContent: "flex-start", marginTop: "20px", marginBottom: "0px" }}>
+                  <a href="#" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                    <div className="hoverable-img" style={{ width: "180px", height: "60px", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", backgroundColor: "#4a5568", display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}>
+                      View Project
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div id="Skills" style={{marginTop: 50, borderTopLeftRadius: 0, borderTopRightRadius: 0, paddingBottom: 50 }}>
             <div className="my-projects">
               My Skills
               <div style={{marginTop: "50px"}}/>
-              <div className="skills-grid">
-                {[
-                  ['java', 'Java'],
-                  ['py', 'Python'],
-                  ['cpp', 'C++'],
-                  ['react', 'React'],
-                  ['html', 'HTML'],
-                  ['css', 'CSS'],
-                  ['javascript', 'JavaScript'],
-                  ['swift', 'Swift'],
-                ].map(([id, label]) => (
-                <div key={id} className="skill-icon">
-                  <img
-                    src={`https://skillicons.dev/icons?i=${id}`}
-                    alt={label}
-                    title={label}
-                    className="hoverable-img"
-                  />
-                  <div className="skill-label">{label}</div>
-                </div>
-                ))}
+
+              <div style={{marginTop: "20px"}}>
+                {/* Frontend */}
+                {activeTab === 'frontend' && (
+                  <div>
+                    <div className="skills-grid">
+                      {[
+                        ['react', 'React'],
+                        ['nextjs', 'Next.js'],
+                        ['html', 'HTML'],
+                        ['css', 'CSS'],
+                        ['javascript', 'JavaScript'],
+                        ['ts', 'TypeScript'],
+                        ['tailwind', 'Tailwind CSS'],
+                      ].map(([id, label]) => (
+                      <div key={id} className="skill-icon">
+                        <img
+                          src={`https://skillicons.dev/icons?i=${id}`}
+                          alt={label}
+                          title={label}
+                          className="hoverable-img"
+                        />
+                        <div className="skill-label">{label}</div>
+                      </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Backend */}
+                {activeTab === 'backend' && (
+                  <div>
+                    <div className="skills-grid">
+                      {[
+                        ['java', 'Java'],
+                        ['py', 'Python'],
+                        ['cpp', 'C++'],
+                      ].map(([id, label]) => (
+                      <div key={id} className="skill-icon">
+                        <img
+                          src={`https://skillicons.dev/icons?i=${id}`}
+                          alt={label}
+                          title={label}
+                          className="hoverable-img"
+                        />
+                        <div className="skill-label">{label}</div>
+                      </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Mobile */}
+                {activeTab === 'mobile' && (
+                  <div>
+                    <div className="skills-grid">
+                      {[
+                        ['swift', 'Swift'],
+                        ['react', 'React Native'],
+                      ].map(([id, label]) => (
+                      <div key={id} className="skill-icon">
+                        <img
+                          src={`https://skillicons.dev/icons?i=${id}`}
+                          alt={label}
+                          title={label}
+                          className="hoverable-img"
+                        />
+                        <div className="skill-label">{label}</div>
+                      </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
+
+              <div role="tablist" className="tabs tabs-box" style={{justifyContent: "center", marginTop: "50px"}}>
+                <a 
+                  role="tab" 
+                  className={`tab ${activeTab === 'frontend' ? 'tab-active' : ''}`}
+                  onClick={() => setActiveTab('frontend')}
+                >
+                  Frontend
+                </a>
+                <a 
+                  role="tab" 
+                  className={`tab ${activeTab === 'backend' ? 'tab-active' : ''}`}
+                  onClick={() => setActiveTab('backend')}
+                >
+                  Backend
+                </a>
+                <a 
+                  role="tab" 
+                  className={`tab ${activeTab === 'mobile' ? 'tab-active' : ''}`}
+                  onClick={() => setActiveTab('mobile')}
+                >
+                  Mobile
+                </a>
+              </div>
+
             </div>
           </div>
 
