@@ -5,6 +5,24 @@ import ContactForm from './ContactForm'
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('frontend');
+  const [selectedSkill, setSelectedSkill] = useState(null);
+  const [skillPosition, setSkillPosition] = useState(null);
+
+  const skillDescriptions = {
+    'react': ['Portfolio Website'],
+    'nextjs': ['AI Interviewer'],
+    'html': ['Portfolio Website'],
+    'css': ['Portfolio Website'],
+    'javascript': ['Portfolio Website', 'Campus Craves', 'AI Interviewer'],
+    'ts': ['Campus Craves', 'AI Interviewer'],
+    'tailwind': ['Portfolio Website'],
+    'vite': ['Portfolio Website'],
+    'java': [],
+    'py': [],
+    'cpp': [],
+    'swift': [],
+    'react-native': [],
+  };
 
   return (
     <div>
@@ -17,31 +35,56 @@ function App() {
           <a href="#Contact" className="btn btn-soft btn-info rounded-full h-[3rem]">Contact</a>
         </div>
 
-      <main className="min-h-screen pt-24">
-        <div className="newcontainer" style={{position: "relative"}}>
-          <div className="hi-font">Hi! I'm</div>
-          <div className="name-font">Lucas Guzylak</div>
-          <div className="avatar" style={{height: 200}}>
-            <div className="w-24 rounded-full">
-            <img src="/NewPortrait.jpeg"/>
+      <main style={{paddingTop: "150px"}}>
+        <div style={{display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", paddingTop: "80px", paddingBottom: "180px"}}>
+          <div style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "15px", width: "100%"}}>
+            <div className="hi-font">Hi! I'm</div>
+            <div className="name-font">Lucas Guzylak</div>
+            <div className="avatar" style={{height: 200}}>
+              <div className="w-24 rounded-full">
+              <img src="/NewPortrait.jpeg"/>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div style={{display: "flex", gap: 20, justifyContent: "center", alignItems: "center"}}>
-          <a href = "https://github.com/LucasGuzylak">
-            <button className="btn btn-xl bg-black text-white border-black">
-              <svg aria-label="GitHub logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
-                GitHub
-            </button>
-          </a>
+          <div style={{
+            textAlign: "center", 
+            maxWidth: "700px", 
+            margin: "10px auto 20px", 
+            fontSize: "18px", 
+            lineHeight: "1.8", 
+            color: "#e2e8f0", 
+            padding: "0 30px",
+            fontFamily: "'Tourney', sans-serif",
+            fontWeight: "700"
+          }}>
+            Computer Science student at San Diego State University with a strong foundation in software development, web, and mobile applications. Passionate about creating intuitive and efficient digital experiences.
+          </div>
 
-          <a href = "https://www.linkedin.com/in/lguzylak/">
-            <button className="btn btn-xl bg-[#0967C2] text-white border-[#0059b3]">
-              <svg aria-label="LinkedIn logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="white" d="M26.111,3H5.889c-1.595,0-2.889,1.293-2.889,2.889V26.111c0,1.595,1.293,2.889,2.889,2.889H26.111c1.595,0,2.889-1.293,2.889-2.889V5.889c0-1.595-1.293-2.889-2.889-2.889ZM10.861,25.389h-3.877V12.87h3.877v12.519Zm-1.957-14.158c-1.267,0-2.293-1.034-2.293-2.31s1.026-2.31,2.293-2.31,2.292,1.034,2.292,2.31-1.026,2.31-2.292,2.31Zm16.485,14.158h-3.858v-6.571c0-1.802-.685-2.809-2.111-2.809-1.551,0-2.362,1.048-2.362,2.809v6.571h-3.718V12.87h3.718v1.686s1.118-2.069,3.775-2.069,4.556,1.621,4.556,4.975v7.926Z" fillRule="evenodd"></path></svg>
-                LinkedIn
-            </button>
-          </a>
+          <div style={{display: "flex", gap: 20, justifyContent: "center", alignItems: "center", flexWrap: "wrap"}}>
+            <a href = "https://github.com/LucasGuzylak">
+              <button className="btn btn-xl bg-black text-white border-black">
+                <svg aria-label="GitHub logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                  GitHub
+              </button>
+            </a>
+
+            <a href = "https://www.linkedin.com/in/lguzylak/">
+              <button className="btn btn-xl bg-[#0967C2] text-white border-[#0059b3]">
+                <svg aria-label="LinkedIn logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="white" d="M26.111,3H5.889c-1.595,0-2.889,1.293-2.889,2.889V26.111c0,1.595,1.293,2.889,2.889,2.889H26.111c1.595,0,2.889-1.293,2.889-2.889V5.889c0-1.595-1.293-2.889-2.889-2.889ZM10.861,25.389h-3.877V12.87h3.877v12.519Zm-1.957-14.158c-1.267,0-2.293-1.034-2.293-2.31s1.026-2.31,2.293-2.31,2.292,1.034,2.292,2.31-1.026,2.31-2.292,2.31Zm16.485,14.158h-3.858v-6.571c0-1.802-.685-2.809-2.111-2.809-1.551,0-2.362,1.048-2.362,2.809v6.571h-3.718V12.87h3.718v1.686s1.118-2.069,3.775-2.069,4.556,1.621,4.556,4.975v7.926Z" fillRule="evenodd"></path></svg>
+                  LinkedIn
+              </button>
+            </a>
+
+            <a href="/resume.pdf" download>
+              <button className="btn btn-xl bg-black text-white border-black">
+                <svg aria-label="Download icon" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Resume
+              </button>
+            </a>
+          </div>
         </div>
         
         <div className= "next-screen">
@@ -50,35 +93,38 @@ function App() {
               My Projects
             </div>
             <div style={{marginTop: "50px"}}/>
-            {/* RAPID Project */}
+            {/* AI Interviewer Project */}
             <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0"}}>   
               <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
-                <video width="300" style={{ marginRight: "100px", borderRadius: "20px" }} controls>
-                  <source src="/rapid_screen_recording.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <div style={{ width: "300px", height: "200px", marginRight: "100px", borderRadius: "20px", backgroundColor: "#2d3748", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "24px" }}>
+                  AI Interviewer
+                </div>
               </div>
               <div style={{color: "black", fontSize: "24px", fontWeight: "600", maxWidth: "500px", textAlign: "left", paddingRight: "20px"}}>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
-                  <h3 style={{textAlign: "center", margin: 0}}>RAPID: Fitness Tracker</h3>
-                  <img src="/Rapid-logo.png" className="hoverable-img" style={{ width: "80px", height: "80px", borderRadius: "18px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)" }} alt="Rapid logo"></img>
+                  <h3 style={{textAlign: "center", margin: 0}}>AI Interviewer</h3>
+                  <div className="hoverable-img" style={{ width: "80px", height: "80px", borderRadius: "18px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", backgroundColor: "#4a5568", flexShrink: 0 }}></div>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
                   <p style={{ margin: 0 }}>Made with:</p>
-                   <img src="https://skillicons.dev/icons?i=swift" className="mini-hoverable-img" style={{ height: "50px" }} />
+                   <img src="https://skillicons.dev/icons?i=nextjs" className="mini-hoverable-img" style={{ height: "50px" }} alt="Next.js" />
+                   <img src="https://skillicons.dev/icons?i=ts" className="mini-hoverable-img" style={{ height: "50px" }} />
+                   <img src="https://skillicons.dev/icons?i=javascript" className="mini-hoverable-img" style={{ height: "50px" }} />
                   </div>
-                <p>Rapid is an iOS fitness app built with Swift and SwiftUI. It allows users to log workouts, track sets and reps, monitor progress, and maintain detailed fitness records.</p>
-                <p>The app uses Core Data for local storage, SwiftUI for the interface, and follows Apple's design guidelines for a clean and intuitive experience.</p>
+                <p>AI Interviewer is a web application built with Next.js, TypeScript, and JavaScript. It provides an AI-powered interview practice platform.</p>
+                <p>The app uses advanced AI to simulate real interview scenarios and provide feedback to help users improve their interview skills.</p>
                 <div style={{ display: "flex", justifyContent: "flex-start", marginTop: "20px", marginBottom: "0px" }}>
-                  <a href="https://apps.apple.com/us/app/rapid-fitness-tracker/id6752265158" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-                    <img src="/appstore_logo.svg" className="hoverable-img" style={{ width: "180px", height: "60px", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)" }} alt="Download on the App Store"></img>
+                  <a href="#" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                    <div className="hoverable-img" style={{ width: "180px", height: "60px", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", backgroundColor: "#4a5568", display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}>
+                      View Project
+                    </div>
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Campus Craves Project */}
-            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", marginBottom: "50px", paddingBottom: "20px"}}>   
+            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "0", borderBottomRightRadius: "0"}}>   
               <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
                 <div style={{ width: "300px", height: "200px", marginRight: "100px", borderRadius: "20px", backgroundColor: "#2d3748", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "24px" }}>
                   Campus Craves
@@ -105,6 +151,39 @@ function App() {
                 </div>
               </div>
             </div>
+
+            {/* RAPID Project */}
+            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", marginBottom: "50px", paddingBottom: "20px"}}>   
+              <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
+                <video width="300" style={{ marginRight: "100px", borderRadius: "20px" }} controls>
+                  <source src="/rapid_screen_recording.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div style={{color: "black", fontSize: "24px", fontWeight: "600", maxWidth: "500px", textAlign: "left", paddingRight: "20px"}}>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
+                  <h3 style={{textAlign: "center", margin: 0}}>RAPID: Fitness Tracker</h3>
+                  <img src="/Rapid-logo.png" className="hoverable-img" style={{ width: "80px", height: "80px", borderRadius: "18px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)" }} alt="Rapid logo"></img>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
+                  <p style={{ margin: 0 }}>Made with:</p>
+                   <img src="https://skillicons.dev/icons?i=swift" className="mini-hoverable-img" style={{ height: "50px" }} />
+                  </div>
+                <p>Rapid is an iOS fitness app built with Swift and SwiftUI. It allows users to log workouts, track sets and reps, monitor progress, and maintain detailed fitness records.</p>
+                <p>The app uses Core Data for local storage, SwiftUI for the interface, and follows Apple's design guidelines for a clean and intuitive experience.</p>
+                <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "15px", marginTop: "20px", marginBottom: "0px" }}>
+                  <a href="https://apps.apple.com/us/app/rapid-fitness-tracker/id6752265158" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+                    <img src="/appstore_logo.svg" className="hoverable-img" style={{ width: "180px", height: "60px", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", display: "block" }} alt="Download on the App Store"></img>
+                  </a>
+                  <a href="https://github.com/LucasGuzylak/RapidFitnessTracker" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+                    <button className="btn btn-xl bg-black text-white border-black" style={{ margin: 0, verticalAlign: "top" }}>
+                      <svg aria-label="GitHub logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                      GitHub
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div id="Skills" style={{marginTop: 50, borderTopLeftRadius: 0, borderTopRightRadius: 0, paddingBottom: 50 }}>
@@ -125,8 +204,21 @@ function App() {
                         ['javascript', 'JavaScript'],
                         ['ts', 'TypeScript'],
                         ['tailwind', 'Tailwind CSS'],
+                        ['vite', 'Vite'],
                       ].map(([id, label]) => (
-                      <div key={id} className="skill-icon">
+                      <div 
+                        key={id} 
+                        className="skill-icon" 
+                        onClick={(e) => {
+                          const rect = e.currentTarget.getBoundingClientRect();
+                          const gridRect = e.currentTarget.closest('.skills-grid').getBoundingClientRect();
+                          setSelectedSkill({id, label});
+                          setSkillPosition({
+                            left: rect.left - gridRect.left + rect.width / 2
+                          });
+                        }} 
+                        style={{cursor: "pointer"}}
+                      >
                         <img
                           src={`https://skillicons.dev/icons?i=${id}`}
                           alt={label}
@@ -149,7 +241,19 @@ function App() {
                         ['py', 'Python'],
                         ['cpp', 'C++'],
                       ].map(([id, label]) => (
-                      <div key={id} className="skill-icon">
+                      <div 
+                        key={id} 
+                        className="skill-icon" 
+                        onClick={(e) => {
+                          const rect = e.currentTarget.getBoundingClientRect();
+                          const gridRect = e.currentTarget.closest('.skills-grid').getBoundingClientRect();
+                          setSelectedSkill({id, label});
+                          setSkillPosition({
+                            left: rect.left - gridRect.left + rect.width / 2
+                          });
+                        }} 
+                        style={{cursor: "pointer"}}
+                      >
                         <img
                           src={`https://skillicons.dev/icons?i=${id}`}
                           alt={label}
@@ -171,7 +275,19 @@ function App() {
                         ['swift', 'Swift'],
                         ['react', 'React Native'],
                       ].map(([id, label]) => (
-                      <div key={id} className="skill-icon">
+                      <div 
+                        key={id} 
+                        className="skill-icon" 
+                        onClick={(e) => {
+                          const rect = e.currentTarget.getBoundingClientRect();
+                          const gridRect = e.currentTarget.closest('.skills-grid').getBoundingClientRect();
+                          setSelectedSkill({id: id === 'react' && label === 'React Native' ? 'react-native' : id, label});
+                          setSkillPosition({
+                            left: rect.left - gridRect.left + rect.width / 2
+                          });
+                        }} 
+                        style={{cursor: "pointer"}}
+                      >
                         <img
                           src={`https://skillicons.dev/icons?i=${id}`}
                           alt={label}
@@ -190,21 +306,33 @@ function App() {
                 <a 
                   role="tab" 
                   className={`tab ${activeTab === 'frontend' ? 'tab-active' : ''}`}
-                  onClick={() => setActiveTab('frontend')}
+                  onClick={() => {
+                    setActiveTab('frontend');
+                    setSelectedSkill(null);
+                    setSkillPosition(null);
+                  }}
                 >
                   Frontend
                 </a>
                 <a 
                   role="tab" 
                   className={`tab ${activeTab === 'backend' ? 'tab-active' : ''}`}
-                  onClick={() => setActiveTab('backend')}
+                  onClick={() => {
+                    setActiveTab('backend');
+                    setSelectedSkill(null);
+                    setSkillPosition(null);
+                  }}
                 >
                   Backend
                 </a>
                 <a 
                   role="tab" 
                   className={`tab ${activeTab === 'mobile' ? 'tab-active' : ''}`}
-                  onClick={() => setActiveTab('mobile')}
+                  onClick={() => {
+                    setActiveTab('mobile');
+                    setSelectedSkill(null);
+                    setSkillPosition(null);
+                  }}
                 >
                   Mobile
                 </a>
