@@ -24,10 +24,11 @@ function App() {
     'react-native': [],
   };
 
+
   return (
     <div>
         <div id="Home"></div>
-        <div className="navbar bg-base-100 shadow-sm fixed top-1/30 left-1/2 -translate-x-1/2 w-auto px-4 z-50 flex justify-between rounded-full">
+        <div className="navbar bg-base-100 shadow-sm fixed top-4 left-1/2 -translate-x-1/2 z-50 flex justify-between rounded-full px-6" style={{width: "auto", maxWidth: "95%", gap: "12px"}}>
           <a href="#Home" className="btn btn-soft btn-info rounded-full h-[3rem]">Home</a>
           <a href="#Experience" className="btn btn-soft btn-info rounded-full h-[3rem]">Experience</a>
           <a href="#Projects" className="btn btn-soft btn-info rounded-full h-[3rem]">Projects</a>
@@ -36,8 +37,8 @@ function App() {
           <a href="#Contact" className="btn btn-soft btn-info rounded-full h-[3rem]">Contact</a>
         </div>
 
-      <main style={{paddingTop: "150px"}}>
-        <div style={{display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", paddingTop: "80px", paddingBottom: "180px"}}>
+      <main className="min-h-screen pt-24">
+        <div style={{display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", paddingTop: "180px", paddingBottom: "50px"}}>
           <div style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "15px", width: "100%"}}>
           <div className="hi-font">Hi! I'm</div>
           <div className="name-font">Lucas Guzylak</div>
@@ -90,15 +91,15 @@ function App() {
               {/* Title and Logo - Centered at Top */}
               <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "15px", marginBottom: "25px" }}>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px" }}>
-                  <h3 style={{textAlign: "center", margin: 0, color: "black", fontSize: "32px", fontWeight: "700"}}>Front End Developer</h3>
+                  <h3 style={{textAlign: "center", margin: 0, color: "black", fontSize: "42px", fontWeight: "900", fontFamily: "'Tourney', sans-serif"}}>Front End Developer</h3>
                   <img src="/WCO_logo.webp" style={{ width: "80px", height: "80px" }} alt="WCO logo"></img>
                 </div>
-                <p style={{margin: 0, color: "black", fontSize: "20px", fontWeight: "500"}}>World Computing Organization</p>
-                <p style={{margin: 0, color: "black", fontSize: "16px", fontWeight: "400"}}>San Diego, CA • October 2025 – Present</p>
+                <p style={{margin: 0, color: "black", fontSize: "26px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif"}}>World Computing Organization</p>
+                <p style={{margin: 0, color: "black", fontSize: "20px", fontWeight: "400", fontFamily: "Arial, Helvetica, sans-serif"}}>San Diego, CA • October 2025 – Present</p>
               </div>
               
               {/* Bullet Points - Middle */}
-              <div style={{color: "black", fontSize: "18px", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px"}}>
+              <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
                 <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
                   <li style={{marginBottom: "12px"}}>Developing front-end features for an AI-powered interview platform that simulates internship and job screening processes, improving user experience and platform functionality.</li>
                   <li style={{marginBottom: "12px"}}>Working with a 6-person development team to build automated structured interviews featuring technical and behavioral question modules, ensuring smooth integration with backend AI systems.</li>
@@ -108,7 +109,7 @@ function App() {
               
               {/* Skills - Bottom */}
               <div style={{ display: "flex", alignItems: "center", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
-                <p style={{ margin: 0, color: "black", fontSize: "18px", fontWeight: "600" }}>Skills:</p>
+                <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Skills:</p>
                 <img src="https://skillicons.dev/icons?i=nextjs" className="mini-hoverable-img" style={{ height: "50px" }} alt="Next.js" />
                 <img src="https://skillicons.dev/icons?i=ts" className="mini-hoverable-img" style={{ height: "50px" }} />
                 <img src="https://skillicons.dev/icons?i=javascript" className="mini-hoverable-img" style={{ height: "50px" }} />
@@ -122,55 +123,51 @@ function App() {
             </div>
             <div style={{marginTop: "50px"}}/>
             {/* Campus Craves Project */}
-            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0"}}>   
-              <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
-                <div style={{ width: "300px", height: "200px", marginRight: "100px", borderRadius: "20px", backgroundColor: "#2d3748", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "24px" }}>
-                  Campus Craves
-                </div>
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", padding: "40px"}}>   
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+                <h3 style={{textAlign: "center", margin: 0, fontFamily: "'Tourney', sans-serif", fontWeight: "900", fontSize: "42px", color: "black"}}>Campus Craves</h3>
               </div>
-              <div style={{color: "black", fontSize: "24px", fontWeight: "600", maxWidth: "500px", textAlign: "left", paddingRight: "20px"}}>
-                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
-                  <h3 style={{textAlign: "center", margin: 0}}>Campus Craves</h3>
-                  <div className="hoverable-img" style={{ width: "80px", height: "80px", borderRadius: "18px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", backgroundColor: "#4a5568", flexShrink: 0 }}></div>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
-                  <p style={{ margin: 0 }}>Made with:</p>
+              <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
+                <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
+                  <li style={{marginBottom: "12px"}}>Mobile app built with React Native and TypeScript that helps students discover and share the best food options on campus.</li>
+                  <li style={{marginBottom: "12px"}}>Features real-time location-based recommendations to help students find nearby dining options.</li>
+                  <li>Includes user reviews and a social feed to connect students with great dining experiences.</li>
+                </ul>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "20px", marginBottom: "0px", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Made with:</p>
                    <img src="https://skillicons.dev/icons?i=react" className="mini-hoverable-img" style={{ height: "50px" }} alt="React" />
                    <img src="https://skillicons.dev/icons?i=ts" className="mini-hoverable-img" style={{ height: "50px" }} />
-                  </div>
-                <p>Campus Craves is a mobile app built with React Native and TypeScript. It helps students discover and share the best food options on campus.</p>
-                <p>The app features real-time location-based recommendations, user reviews, and a social feed to connect students with great dining experiences.</p>
-                <div style={{ display: "flex", justifyContent: "flex-start", marginTop: "20px", marginBottom: "0px" }}>
-                  <a href="https://github.com/CampusCraves/CampusCraves" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
-                    <button className="btn btn-xl bg-black text-white border-black" style={{ margin: 0, verticalAlign: "top" }}>
-                      <svg aria-label="GitHub logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
-                      GitHub
-                    </button>
-                  </a>
                 </div>
+                <a href="https://github.com/CampusCraves/CampusCraves" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+                  <button className="btn btn-xl bg-black text-white border-black" style={{ margin: 0, verticalAlign: "top" }}>
+                    <svg aria-label="GitHub logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                    GitHub
+                  </button>
+                </a>
               </div>
             </div>
 
             {/* RAPID Project */}
-            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", paddingBottom: "20px"}}>   
-              <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
-                <video width="300" style={{ marginRight: "100px", borderRadius: "20px" }} controls>
-                  <source src="/rapid_screen_recording.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", padding: "40px"}}>   
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
+                <h3 style={{textAlign: "center", margin: 0, fontFamily: "'Tourney', sans-serif", fontWeight: "900", fontSize: "42px", color: "black"}}>RAPID: Fitness Tracker</h3>
+                <img src="/Rapid-logo.png" className="hoverable-img" style={{ width: "80px", height: "80px", borderRadius: "18px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)" }} alt="Rapid logo"></img>
               </div>
-              <div style={{color: "black", fontSize: "24px", fontWeight: "600", maxWidth: "500px", textAlign: "left", paddingRight: "20px"}}>
-                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
-                  <h3 style={{textAlign: "center", margin: 0}}>RAPID: Fitness Tracker</h3>
-                  <img src="/Rapid-logo.png" className="hoverable-img" style={{ width: "80px", height: "80px", borderRadius: "18px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)" }} alt="Rapid logo"></img>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
-                  <p style={{ margin: 0 }}>Made with:</p>
+              <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
+                <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
+                  <li style={{marginBottom: "12px"}}>iOS fitness app built with Swift and SwiftUI that allows users to log workouts, track sets and reps, and monitor progress.</li>
+                  <li style={{marginBottom: "12px"}}>Uses Core Data for local storage to maintain detailed fitness records.</li>
+                  <li>Follows Apple's design guidelines for a clean and intuitive user experience.</li>
+                </ul>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "20px", marginBottom: "0px", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Made with:</p>
                    <img src="https://skillicons.dev/icons?i=swift" className="mini-hoverable-img" style={{ height: "50px" }} />
-                  </div>
-                <p>Rapid is an iOS fitness app built with Swift and SwiftUI. It allows users to log workouts, track sets and reps, monitor progress, and maintain detailed fitness records.</p>
-                <p>The app uses Core Data for local storage, SwiftUI for the interface, and follows Apple's design guidelines for a clean and intuitive experience.</p>
-                <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "15px", marginTop: "20px", marginBottom: "0px" }}>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
                   <a href="https://apps.apple.com/us/app/rapid-fitness-tracker/id6752265158" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
                     <img src="/appstore_logo.svg" className="hoverable-img" style={{ width: "180px", height: "60px", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", display: "block" }} alt="Download on the App Store"></img>
                   </a>
@@ -185,35 +182,33 @@ function App() {
             </div>
 
             {/* Portfolio Website Project */}
-            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", marginBottom: "50px", paddingBottom: "20px"}}>   
-              <div style={{paddingLeft: "20px", paddingTop: "20px", paddingBottom: "15px"}}>         
-                <div style={{ width: "300px", height: "200px", marginRight: "100px", borderRadius: "20px", backgroundColor: "#2d3748", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "24px" }}>
-                  Portfolio Website
-                </div>
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", marginBottom: "50px", padding: "40px"}}>   
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+                <h3 style={{textAlign: "center", margin: 0, fontFamily: "'Tourney', sans-serif", fontWeight: "900", fontSize: "42px", color: "black"}}>Portfolio Website</h3>
               </div>
-              <div style={{color: "black", fontSize: "24px", fontWeight: "600", maxWidth: "500px", textAlign: "left", paddingRight: "20px"}}>
-                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
-                  <h3 style={{textAlign: "center", margin: 0}}>Portfolio Website</h3>
-                  <div className="hoverable-img" style={{ width: "80px", height: "80px", borderRadius: "18px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", backgroundColor: "#4a5568", flexShrink: 0 }}></div>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
-                  <p style={{ margin: 0 }}>Made with:</p>
+              <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
+                <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
+                  <li style={{marginBottom: "12px"}}>Personal portfolio website showcasing my projects, skills, and experience built with React, Vite, and Tailwind CSS.</li>
+                  <li style={{marginBottom: "12px"}}>Features smooth scrolling navigation and interactive skill displays for an engaging user experience.</li>
+                  <li>Clean and modern responsive design that effectively presents my work and background.</li>
+                </ul>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "20px", marginBottom: "0px", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Made with:</p>
                    <img src="https://skillicons.dev/icons?i=react" className="mini-hoverable-img" style={{ height: "50px" }} alt="React" />
                    <img src="https://skillicons.dev/icons?i=vite" className="mini-hoverable-img" style={{ height: "50px" }} alt="Vite" />
                    <img src="https://skillicons.dev/icons?i=javascript" className="mini-hoverable-img" style={{ height: "50px" }} />
                    <img src="https://skillicons.dev/icons?i=html" className="mini-hoverable-img" style={{ height: "50px" }} />
                    <img src="https://skillicons.dev/icons?i=css" className="mini-hoverable-img" style={{ height: "50px" }} />
                    <img src="https://skillicons.dev/icons?i=tailwind" className="mini-hoverable-img" style={{ height: "50px" }} />
-                  </div>
-                <p>A personal portfolio website showcasing my projects, skills, and experience. Built with React, Vite, and Tailwind CSS for a modern and responsive design.</p>
-                <p>The website features smooth scrolling, interactive skill displays, and a clean interface to present my work and background effectively.</p>
-                <div style={{ display: "flex", justifyContent: "flex-start", marginTop: "20px", marginBottom: "0px" }}>
-                  <a href="#" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-                    <div className="hoverable-img" style={{ width: "180px", height: "60px", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", backgroundColor: "#4a5568", display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}>
-                      View Project
-                    </div>
-                  </a>
                 </div>
+                <a href="https://github.com/LucasGuzylak/my-portfolio" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+                  <button className="btn btn-xl bg-black text-white border-black" style={{ margin: 0, verticalAlign: "top" }}>
+                    <svg aria-label="GitHub logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                    GitHub
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -379,7 +374,7 @@ function App() {
               My Education
             </div>
             <div style={{marginTop: "50px"}}/>
-            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px"}}>
+            <div className="flex justify-center items-center gap-10 mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", padding: "40px", marginBottom: "30px"}}>
               <img src="/college-of-sciences-vert-1color-black-rgb.png"
                 style={{width: "300px", height: "auto", position: "absolute", left: "18%"}} 
                 alt="College of Sciences Logo"/>
@@ -387,10 +382,17 @@ function App() {
                 <h4>Pursuing a Bachelor of Science</h4>
                 <h5>San Diego State University</h5>
                 <h5>Graduating in 2028</h5>
-                <h5>GPA 3.8</h5>
+                <h5>GPA: 3.75</h5>
                 <h5>Major in Computer Science</h5>
                 <h5>Dean's List - Fall 2024 & Spring 2025</h5>
               </div>
+            </div>
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", padding: "40px", marginBottom: "30px"}}>
+              <div className="text-center" style={{color: "black", fontSize: "24px", width: "100%"}}>
+                <h3 style={{margin: "0 0 15px 0", fontSize: "32px", fontWeight: "700"}}>Certificate of Excellence Award</h3>
+                <p style={{margin: "0 0 20px 0", fontSize: "20px", fontWeight: "500"}}>Awarded for earning the highest grade in Computer Organization</p>
+              </div>
+              <img src="/Certificate_of_Excellence_Award_Lucas_Guzylak.png" alt="Certificate of Excellence Award" style={{maxWidth: "100%", width: "100%", height: "auto"}} />
             </div>
           </div>
 
