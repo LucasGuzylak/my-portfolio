@@ -18,7 +18,7 @@ function App() {
     'tailwind': ['Portfolio Website'],
     'vite': ['Portfolio Website'],
     'java': [],
-    'py': ['Cancer Detection'],
+    'py': ['Deep Learning Project'],
     'c': [],
     'cpp': [],
     'nodejs': ['CrewTrace'],
@@ -27,7 +27,7 @@ function App() {
     'supabase': [],
     'swift': ['RAPID'],
     'react-native': ['Campus Craves'],
-    'pytorch': ['Cancer Detection'],
+    'pytorch': ['Deep Learning Project'],
     'docker': [],
     'git': [],
     'github': [],
@@ -158,24 +158,30 @@ function App() {
               My Projects
             </div>
             <div style={{marginTop: "50px"}}/>
-            {/* Cancer Detection Project */}
+            {/* Deep Learning Project */}
             <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", padding: "40px"}}>   
               <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
-                <h3 style={{textAlign: "center", margin: 0, fontFamily: "'Tourney', sans-serif", fontWeight: "900", fontSize: "42px", color: "black"}}>Cancer Detection: Deep Learning</h3>
+                <h3 style={{textAlign: "center", margin: 0, fontFamily: "'Tourney', sans-serif", fontWeight: "900", fontSize: "42px", color: "black"}}>Deep Learning Project</h3>
               </div>
               <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
                 <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
-                  <li style={{marginBottom: "12px"}}>Trained an attention-based Multiple Instance Learning model on CAMELYON16 pathology slides, reaching 86.7% accuracy on held-out slides using only slide-level labels.</li>
-                  <li style={{marginBottom: "12px"}}>Showed emergent tumor localization from weak supervision alone: attention concentrated ~6× more on cancerous tissue, correctly flagging 19 of the top 50 patches as tumor.</li>
-                  <li>Built the pipeline through a 6-stage PyTorch curriculum: CNNs, transfer learning (ResNet18), and MIL, validated on progressively harder datasets before real pathology data.</li>
+                  <li style={{marginBottom: "12px"}}>Self-directed deep learning project that detects breast cancer in real pathology slides using an attention-based Multiple Instance Learning model built in PyTorch.</li>
+                  <li style={{marginBottom: "12px"}}>Reached 86.7% accuracy on held-out CAMELYON16 slides using only slide-level labels, and showed the model's attention focusing on tumor regions without patch-level annotations.</li>
+                  <li>Learned the full pipeline step by step, from CNNs and transfer learning with ResNet18 to MIL, validating each technique on smaller datasets before applying it to real medical imaging data.</li>
                 </ul>
               </div>
-              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", marginTop: "20px", marginBottom: "0px", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "20px", marginBottom: "0px", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Made with:</p>
                    <img src="https://skillicons.dev/icons?i=py" className="mini-hoverable-img" style={{ height: "50px" }} alt="Python" />
                    <img src="https://skillicons.dev/icons?i=pytorch" className="mini-hoverable-img" style={{ height: "50px" }} alt="PyTorch" />
                 </div>
+                <a href="https://github.com/LucasGuzylak/ml-cancer-proj" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+                  <button className="btn btn-xl bg-black text-white border-black" style={{ margin: 0, verticalAlign: "top" }}>
+                    <svg aria-label="GitHub logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                    GitHub
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -191,12 +197,18 @@ function App() {
                   <li>Kept the dashboard operational through live service outages with automated fallbacks, while masking private API keys in logs.</li>
                 </ul>
               </div>
-              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", marginTop: "20px", marginBottom: "0px", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "20px", marginBottom: "0px", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Made with:</p>
                    <img src="https://skillicons.dev/icons?i=react" className="mini-hoverable-img" style={{ height: "50px" }} alt="React" />
                    <img src="https://skillicons.dev/icons?i=nodejs" className="mini-hoverable-img" style={{ height: "50px" }} alt="Node.js" />
                 </div>
+                <a href="https://github.com/Sqrl34/RTE-UCSD-Project" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+                  <button className="btn btn-xl bg-black text-white border-black" style={{ margin: 0, verticalAlign: "top" }}>
+                    <svg aria-label="GitHub logo" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                    GitHub
+                  </button>
+                </a>
               </div>
             </div>
 
