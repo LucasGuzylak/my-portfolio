@@ -9,7 +9,7 @@ function App() {
   const [skillPosition, setSkillPosition] = useState(null);
 
   const skillDescriptions = {
-    'react': ['Portfolio Website'],
+    'react': ['Portfolio Website', 'CrewTrace'],
     'nextjs': ['AI Interviewer'],
     'html': ['Portfolio Website'],
     'css': ['Portfolio Website'],
@@ -18,10 +18,19 @@ function App() {
     'tailwind': ['Portfolio Website'],
     'vite': ['Portfolio Website'],
     'java': [],
-    'py': [],
+    'py': ['Cancer Detection'],
+    'c': [],
     'cpp': [],
-    'swift': [],
-    'react-native': [],
+    'nodejs': ['CrewTrace'],
+    'express': ['CrewTrace'],
+    'mysql': ['Campus Craves'],
+    'supabase': [],
+    'swift': ['RAPID'],
+    'react-native': ['Campus Craves'],
+    'pytorch': ['Cancer Detection'],
+    'docker': [],
+    'git': [],
+    'github': [],
   };
 
 
@@ -60,7 +69,7 @@ function App() {
             fontFamily: "'Tourney', sans-serif",
             fontWeight: "700"
           }}>
-            I am a Computer Science student at San Diego State University with a strong foundation in software development, web, and mobile applications. I am Passionate about creating intuitive and efficient digital experiences.
+            I am a Computer Science student at San Diego State University with a strong foundation in software development, web, mobile applications, and machine learning. I am Passionate about creating intuitive and efficient digital experiences.
         </div>
 
           <div style={{display: "flex", gap: 20, justifyContent: "center", alignItems: "center", flexWrap: "wrap"}}>
@@ -87,7 +96,7 @@ function App() {
             </div>
             <div style={{marginTop: "50px"}}/>
             {/* Front End Developer */}
-            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", padding: "40px"}}>   
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", padding: "40px"}}>   
               {/* Title and Logo - Centered at Top */}
               <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "15px", marginBottom: "25px" }}>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px" }}>
@@ -95,7 +104,7 @@ function App() {
                   <img src="/WCO_logo.webp" style={{ width: "80px", height: "80px" }} alt="WCO logo"></img>
                 </div>
                 <p style={{margin: 0, color: "black", fontSize: "26px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif"}}>World Computing Organization</p>
-                <p style={{margin: 0, color: "black", fontSize: "20px", fontWeight: "400", fontFamily: "Arial, Helvetica, sans-serif"}}>San Diego, CA • October 2025 – Present</p>
+                <p style={{margin: 0, color: "black", fontSize: "20px", fontWeight: "400", fontFamily: "Arial, Helvetica, sans-serif"}}>San Diego, CA • October 2025 to Present</p>
               </div>
               
               {/* Bullet Points - Middle */}
@@ -115,6 +124,33 @@ function App() {
                 <img src="https://skillicons.dev/icons?i=javascript" className="mini-hoverable-img" style={{ height: "50px" }} />
               </div>
             </div>
+
+            {/* Mobile Application Developer - Susty */}
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", padding: "40px"}}>   
+              <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "15px", marginBottom: "25px" }}>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px" }}>
+                  <h3 style={{textAlign: "center", margin: 0, color: "black", fontSize: "42px", fontWeight: "900", fontFamily: "'Tourney', sans-serif"}}>Mobile Application Developer</h3>
+                </div>
+                <p style={{margin: 0, color: "black", fontSize: "26px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif"}}>Susty, Inc.</p>
+                <p style={{margin: 0, color: "black", fontSize: "20px", fontWeight: "400", fontFamily: "Arial, Helvetica, sans-serif"}}>Remote • February 2026 to May 2026</p>
+              </div>
+              
+              <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
+                <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
+                  <li style={{marginBottom: "12px"}}>Increased feed responsiveness by 25% with infinite scrolling, optimized list rendering, and efficient state management for high-volume, real-time content.</li>
+                  <li style={{marginBottom: "12px"}}>Built secure authentication workflows and a scalable social-graph system across 5+ core features, using optimized SQL queries to manage relational user data at scale.</li>
+                  <li>Shipped features end to end with a startup engineering team, integrating frontend with backend APIs and maintaining containerized environments with Docker, Git, and GitHub workflows.</li>
+                </ul>
+              </div>
+              
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
+                <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Skills:</p>
+                <img src="https://skillicons.dev/icons?i=react" className="mini-hoverable-img" style={{ height: "50px" }} alt="React" />
+                <img src="https://skillicons.dev/icons?i=ts" className="mini-hoverable-img" style={{ height: "50px" }} alt="TypeScript" />
+                <img src="https://skillicons.dev/icons?i=mysql" className="mini-hoverable-img" style={{ height: "50px" }} alt="SQL" />
+                <img src="https://skillicons.dev/icons?i=docker" className="mini-hoverable-img" style={{ height: "50px" }} alt="Docker" />
+              </div>
+            </div>
         </div>
         
           <div id="Projects" style={{marginTop: "50px"}}>
@@ -122,8 +158,50 @@ function App() {
               My Projects
             </div>
             <div style={{marginTop: "50px"}}/>
-            {/* Campus Craves Project */}
+            {/* Cancer Detection Project */}
             <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", padding: "40px"}}>   
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+                <h3 style={{textAlign: "center", margin: 0, fontFamily: "'Tourney', sans-serif", fontWeight: "900", fontSize: "42px", color: "black"}}>Cancer Detection: Deep Learning</h3>
+              </div>
+              <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
+                <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
+                  <li style={{marginBottom: "12px"}}>Trained an attention-based Multiple Instance Learning model on CAMELYON16 pathology slides, reaching 86.7% accuracy on held-out slides using only slide-level labels.</li>
+                  <li style={{marginBottom: "12px"}}>Showed emergent tumor localization from weak supervision alone: attention concentrated ~6× more on cancerous tissue, correctly flagging 19 of the top 50 patches as tumor.</li>
+                  <li>Built the pipeline through a 6-stage PyTorch curriculum: CNNs, transfer learning (ResNet18), and MIL, validated on progressively harder datasets before real pathology data.</li>
+                </ul>
+              </div>
+              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", marginTop: "20px", marginBottom: "0px", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Made with:</p>
+                   <img src="https://skillicons.dev/icons?i=py" className="mini-hoverable-img" style={{ height: "50px" }} alt="Python" />
+                   <img src="https://skillicons.dev/icons?i=pytorch" className="mini-hoverable-img" style={{ height: "50px" }} alt="PyTorch" />
+                </div>
+              </div>
+            </div>
+
+            {/* CrewTrace Project */}
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", padding: "40px"}}>   
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+                <h3 style={{textAlign: "center", margin: 0, fontFamily: "'Tourney', sans-serif", fontWeight: "900", fontSize: "42px", color: "black"}}>CrewTrace</h3>
+              </div>
+              <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
+                <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
+                  <li style={{marginBottom: "12px"}}>Built a live mapping dashboard at the Reboot the Earth Hackathon (UCSD) that unified wildfire data, weather forecasts, and AI-powered camera analysis for emergency decision-making.</li>
+                  <li style={{marginBottom: "12px"}}>Cut external API costs and improved speed with a Node.js/Express backend that batches nearby crew data before calling weather and AI vision services.</li>
+                  <li>Kept the dashboard operational through live service outages with automated fallbacks, while masking private API keys in logs.</li>
+                </ul>
+              </div>
+              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", marginTop: "20px", marginBottom: "0px", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Made with:</p>
+                   <img src="https://skillicons.dev/icons?i=react" className="mini-hoverable-img" style={{ height: "50px" }} alt="React" />
+                   <img src="https://skillicons.dev/icons?i=nodejs" className="mini-hoverable-img" style={{ height: "50px" }} alt="Node.js" />
+                </div>
+              </div>
+            </div>
+
+            {/* Campus Craves Project */}
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", padding: "40px"}}>   
               <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
                 <h3 style={{textAlign: "center", margin: 0, fontFamily: "'Tourney', sans-serif", fontWeight: "900", fontSize: "42px", color: "black"}}>Campus Craves</h3>
               </div>
@@ -266,7 +344,12 @@ function App() {
                 {[
                   ['java', 'Java'],
                   ['py', 'Python'],
+                  ['c', 'C'],
                   ['cpp', 'C++'],
+                  ['nodejs', 'Node.js'],
+                  ['express', 'Express'],
+                  ['mysql', 'SQL'],
+                  ['supabase', 'Supabase'],
                       ].map(([id, label]) => (
                       <div 
                         key={id} 
@@ -327,6 +410,42 @@ function App() {
               </div>
                   </div>
                 )}
+
+                {/* Tools */}
+                {activeTab === 'tools' && (
+                  <div>
+                    <div className="skills-grid">
+                      {[
+                        ['pytorch', 'PyTorch'],
+                        ['docker', 'Docker'],
+                        ['git', 'Git'],
+                        ['github', 'GitHub'],
+                      ].map(([id, label]) => (
+                      <div 
+                        key={id} 
+                        className="skill-icon" 
+                        onClick={(e) => {
+                          const rect = e.currentTarget.getBoundingClientRect();
+                          const gridRect = e.currentTarget.closest('.skills-grid').getBoundingClientRect();
+                          setSelectedSkill({id, label});
+                          setSkillPosition({
+                            left: rect.left - gridRect.left + rect.width / 2
+                          });
+                        }} 
+                        style={{cursor: "pointer"}}
+                      >
+                        <img
+                          src={`https://skillicons.dev/icons?i=${id}`}
+                          alt={label}
+                          title={label}
+                          className="hoverable-img"
+                        />
+                        <div className="skill-label">{label}</div>
+                      </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div role="tablist" className="tabs tabs-box" style={{justifyContent: "center", marginTop: "50px"}}>
@@ -363,6 +482,17 @@ function App() {
                 >
                   Mobile
                 </a>
+                <a 
+                  role="tab" 
+                  className={`tab ${activeTab === 'tools' ? 'tab-active' : ''}`}
+                  onClick={() => {
+                    setActiveTab('tools');
+                    setSelectedSkill(null);
+                    setSkillPosition(null);
+                  }}
+                >
+                  Tools
+                </a>
               </div>
 
             </div>
@@ -382,9 +512,10 @@ function App() {
                 <h4>Pursuing a Bachelor of Science</h4>
                 <h5>San Diego State University</h5>
                 <h5>Graduating in 2028</h5>
-                <h5>GPA: 3.75</h5>
+                <h5>GPA: 3.8</h5>
                 <h5>Major in Computer Science</h5>
-                <h5>Dean's List - Fall 2024 & Spring 2025</h5>
+                <h5>Minor in Mathematics</h5>
+                <h5>Dean's List - All Semesters</h5>
               </div>
             </div>
             <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", padding: "40px", marginBottom: "30px"}}>
