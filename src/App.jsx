@@ -95,60 +95,56 @@ function App() {
               My Experience
             </div>
             <div style={{marginTop: "50px"}}/>
-            {/* Front End Developer */}
-            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", padding: "40px"}}>   
+            {/* AI4Business Lab Research Assistant */}
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "20px", borderTopRightRadius: "20px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", padding: "40px"}}>
               {/* Title and Logo - Centered at Top */}
               <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "15px", marginBottom: "25px" }}>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px" }}>
-                  <h3 style={{textAlign: "center", margin: 0, color: "black", fontSize: "42px", fontWeight: "900", fontFamily: "'Tourney', sans-serif"}}>Front End Developer</h3>
-                  <img src="/WCO_logo.webp" style={{ width: "80px", height: "80px" }} alt="WCO logo"></img>
+                  <h3 style={{textAlign: "center", margin: 0, color: "black", fontSize: "42px", fontWeight: "900", fontFamily: "'Tourney', sans-serif"}}>AI4Business Lab Research Assistant</h3>
                 </div>
-                <p style={{margin: 0, color: "black", fontSize: "26px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif"}}>World Computing Organization</p>
-                <p style={{margin: 0, color: "black", fontSize: "20px", fontWeight: "400", fontFamily: "Arial, Helvetica, sans-serif"}}>San Diego, CA • October 2025 to Present</p>
+                <p style={{margin: 0, color: "black", fontSize: "26px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif"}}>SDSU Research Foundation</p>
+                <p style={{margin: 0, color: "black", fontSize: "20px", fontWeight: "400", fontFamily: "Arial, Helvetica, sans-serif"}}>San Diego, CA • September 2026 to Present</p>
               </div>
-              
+
               {/* Bullet Points - Middle */}
               <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
                 <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
-                  <li style={{marginBottom: "12px"}}>Developing front-end features for an AI-powered interview platform that simulates internship and job screening processes, improving user experience and platform functionality.</li>
-                  <li style={{marginBottom: "12px"}}>Working with a 6-person development team to build automated structured interviews featuring technical and behavioral question modules, ensuring smooth integration with backend AI systems.</li>
-                  <li>Creating user interfaces that deliver actionable feedback to candidates, helping them prepare effectively for real-world interviews.</li>
+                  <li style={{marginBottom: "12px"}}>Incoming researcher on a project studying adversarial attacks and defenses in agentic AI systems, examining how security threats such as prompt injection and memory poisoning propagate into model safety failures and loss of user trust.</li>
+                  <li>Focused on building agentic systems in Python and LangGraph and implementing guardrail patterns around them, including tool-execution gating, output sanitization, and human-in-the-loop review before critical actions.</li>
                 </ul>
               </div>
-              
+
               {/* Skills - Bottom */}
               <div style={{ display: "flex", alignItems: "center", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
                 <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Skills:</p>
-                <img src="https://skillicons.dev/icons?i=nextjs" className="mini-hoverable-img" style={{ height: "50px" }} alt="Next.js" />
-                <img src="https://skillicons.dev/icons?i=ts" className="mini-hoverable-img" style={{ height: "50px" }} />
-                <img src="https://skillicons.dev/icons?i=javascript" className="mini-hoverable-img" style={{ height: "50px" }} />
+                <img src="https://skillicons.dev/icons?i=py" className="mini-hoverable-img" style={{ height: "50px" }} alt="Python" />
+                <img src="https://skillicons.dev/icons?i=pytorch" className="mini-hoverable-img" style={{ height: "50px" }} alt="PyTorch" />
               </div>
             </div>
 
-            {/* Mobile Application Developer - Susty */}
-            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", padding: "40px"}}>   
+            {/* Founder / President - Devs For Impact */}
+            <div className="flex flex-col justify-center items-center mx-auto" style={{backgroundColor: "#3f90e0", maxWidth: "900px", borderTopLeftRadius: "0", borderTopRightRadius: "0", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", padding: "40px"}}>
               <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "15px", marginBottom: "25px" }}>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px" }}>
-                  <h3 style={{textAlign: "center", margin: 0, color: "black", fontSize: "42px", fontWeight: "900", fontFamily: "'Tourney', sans-serif"}}>Mobile Application Developer</h3>
+                  <h3 style={{textAlign: "center", margin: 0, color: "black", fontSize: "42px", fontWeight: "900", fontFamily: "'Tourney', sans-serif"}}>Founder / President</h3>
+                  <img src="/Devs4Impact_logo.jpg" style={{ width: "80px", height: "80px", borderRadius: "12px" }} alt="Devs For Impact logo"></img>
                 </div>
-                <p style={{margin: 0, color: "black", fontSize: "26px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif"}}>Susty, Inc.</p>
-                <p style={{margin: 0, color: "black", fontSize: "20px", fontWeight: "400", fontFamily: "Arial, Helvetica, sans-serif"}}>Remote • February 2026 to May 2026</p>
+                <p style={{margin: 0, color: "black", fontSize: "26px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif"}}>Devs For Impact, World Computing Organization Chapter at SDSU</p>
+                <p style={{margin: 0, color: "black", fontSize: "20px", fontWeight: "400", fontFamily: "Arial, Helvetica, sans-serif"}}>San Diego, CA • August 2026 to Present</p>
               </div>
-              
+
               <div style={{color: "black", fontSize: "22px", fontWeight: "500", textAlign: "left", width: "100%", maxWidth: "750px", marginBottom: "30px", fontFamily: "Arial, Helvetica, sans-serif"}}>
                 <ul style={{ listStyle: "disc", paddingLeft: "25px", margin: 0, lineHeight: "1.8" }}>
-                  <li style={{marginBottom: "12px"}}>Increased feed responsiveness by 25% with infinite scrolling, optimized list rendering, and efficient state management for high-volume, real-time content.</li>
-                  <li style={{marginBottom: "12px"}}>Built secure authentication workflows and a scalable social-graph system across 5+ core features, using optimized SQL queries to manage relational user data at scale.</li>
-                  <li>Shipped features end to end with a startup engineering team, integrating frontend with backend APIs and maintaining containerized environments with Docker, Git, and GitHub workflows.</li>
+                  <li style={{marginBottom: "12px"}}>Founded and lead a World Computing Organization chapter at SDSU, pairing local nonprofits that cannot fund software with student engineering teams that build it free, and built the chapter website used for outreach and recruiting.</li>
+                  <li style={{marginBottom: "12px"}}>Recruited and manage a five-person officer team across Vice President, Treasurer, Secretary, and Director of Technology, owning technical direction and delegating operations and finances.</li>
+                  <li>Designed the client engagement process of requirements gathering, scoping, and agreed delivery timelines before development begins, plus an application pipeline recruiting developers, designers, and outreach volunteers.</li>
                 </ul>
               </div>
-              
+
               <div style={{ display: "flex", alignItems: "center", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
                 <p style={{ margin: 0, color: "black", fontSize: "22px", fontWeight: "500", fontFamily: "Arial, Helvetica, sans-serif" }}>Skills:</p>
                 <img src="https://skillicons.dev/icons?i=react" className="mini-hoverable-img" style={{ height: "50px" }} alt="React" />
-                <img src="https://skillicons.dev/icons?i=ts" className="mini-hoverable-img" style={{ height: "50px" }} alt="TypeScript" />
-                <img src="https://skillicons.dev/icons?i=mysql" className="mini-hoverable-img" style={{ height: "50px" }} alt="SQL" />
-                <img src="https://skillicons.dev/icons?i=docker" className="mini-hoverable-img" style={{ height: "50px" }} alt="Docker" />
+                <img src="https://skillicons.dev/icons?i=js" className="mini-hoverable-img" style={{ height: "50px" }} alt="JavaScript" />
               </div>
             </div>
         </div>
