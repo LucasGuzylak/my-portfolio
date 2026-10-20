@@ -60,11 +60,13 @@
   transform: scale(1.15);
 }
 
+/* One row per tab: columns shrink with the viewport rather than wrapping */
 .skills-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(var(--skill-count), minmax(0, 100px));
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
+  gap: clamp(6px, 1.5vw, 20px);
+  padding: 0 8px;
   margin-top: 20px;
 }
 
