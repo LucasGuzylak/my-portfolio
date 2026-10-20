@@ -41,6 +41,40 @@ const ContactForm = () => {
         marginRight: "auto",
       }}
     >
+      {/* Name input */}
+      <div style={{ marginBottom: "0.5rem" }}>
+        <label
+          className="input"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.5rem",
+            width: "100%",
+          }}
+        >
+          <svg
+            className="h-[1em] opacity-50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 21a8 8 0 0 1 16 0"></path>
+          </svg>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            autoComplete="name"
+            required
+          />
+        </label>
+      </div>
+
       {/* Email input */}
       <div>
         <label
